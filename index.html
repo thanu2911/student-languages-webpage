@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Languages for Students</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f2fe, #fef9c3);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      border-bottom: 5px solid #333;
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      padding: 20px;
+    }
+    .card {
+      display: inline-block;
+      width: 220px;
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      vertical-align: top;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #1e3a8a;
+    }
+    #infoBox {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f1f5f9;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 17px;
+      display: none; /* hidden initially */
+    }
+    a {
+      color: darkred;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: green;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+      background-color: #f1f5f9;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML Structure -->
+  <header>
+    <h1>📘 Programming Languages for Students</h1>
+  </header>
+
+  <section>
+    <!-- Cards for Languages -->
+    <div class="card" onclick="showInfo('C')">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C Language">
+      <h3>C</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showInfo('Python')">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python">
+      <h3>Python</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showInfo('JavaScript')">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="JavaScript">
+      <h3>JavaScript</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showInfo('Java')">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+      <h3>Java</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <!-- Info Box -->
+    <div id="infoBox"></div>
+
+    <!-- Link -->
+    <p>🔗 Learn more at <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
+  </section>
+
+  <footer>
+    © 2025 Student Resources | Built with HTML, CSS & JS
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showInfo(language) {
+      let info = "";
+      if (language === "C") {
+        info = "C is the foundation of many modern languages. It helps students understand memory management and low-level programming concepts.";
+      } else if (language === "Python") {
+        info = "Python is beginner-friendly, widely used in AI, Data Science, and Web Development. Its syntax is easy to learn.";
+      } else if (language === "JavaScript") {
+        info = "JavaScript powers the web. It adds interactivity to websites and is essential for frontend development.";
+      } else if (language === "Java") {
+        info = "Java is a versatile, object-oriented language widely used for Android apps and enterprise systems.";
+      }
+      let infoBox = document.getElementById("infoBox");
+      infoBox.innerHTML = "<h2>" + language + "</h2><p>" + info + "</p>";
+      infoBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
+
